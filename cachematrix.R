@@ -2,6 +2,13 @@
 ## the inversion is calculated only once
 ## The result is cached in global scope after both functions have run
 
+## myMatrix <- matrix(runif(9), nrow=3, ncol=3)
+## invObj <- makeCacheMatrix(myMatrix)
+## b <- cacheSolve(invObj)
+## myMatrix
+## solve(myMatrix)
+## b
+
 
 ## makeCacheMatrix takes an invertable matrix as its argument
 ## It then  creates a function object with that matrix
@@ -41,10 +48,5 @@ cacheSolve <- function(x, ...) {
     }
     return(m)
 }
-
-
-## myMatrix <- matrix(runif(9), nrow=3, ncol=3)
-## invObj <- makeCacheMatrix(myMatrix)
-## b <- cacheSolve(invObj)
 
 
